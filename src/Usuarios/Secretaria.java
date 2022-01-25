@@ -7,7 +7,7 @@ package Usuarios;
 
 /**
  *
- * @author Kevinssg12
+ * @author DB
  */
 public class Secretaria extends Persona{
     String cargo;

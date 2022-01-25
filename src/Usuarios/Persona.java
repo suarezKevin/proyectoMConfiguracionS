@@ -7,7 +7,7 @@ package Usuarios;
 
 /**
  *
- * @author Kevinssg12
+ * @author DB
  */
 public abstract class Persona {
     
