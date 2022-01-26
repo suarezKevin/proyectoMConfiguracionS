@@ -19,6 +19,7 @@ import javax.swing.JOptionPane;
  * @author Dalembert
  */
 public class SQL {
+    //metodo para incrementar en la BD
 
     public static int id_inrementable() {
         int id = 1;
