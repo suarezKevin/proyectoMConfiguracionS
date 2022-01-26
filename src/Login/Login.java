@@ -168,7 +168,7 @@ public class Login extends javax.swing.JFrame {
         jLabel5.setBackground(new java.awt.Color(51, 0, 204));
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 204));
-        jLabel5.setText("APP JAKAY");
+        jLabel5.setText("Gestion de Inmuebles");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
