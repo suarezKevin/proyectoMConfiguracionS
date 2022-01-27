@@ -39,10 +39,9 @@
     <div style="text-align: center;">
         <a href="registro.jsp">Registrarse</a>
     </div>
-    </form>
-       
+    </form
     </div>
-    </body>
+</body>
 </html>
 
 
