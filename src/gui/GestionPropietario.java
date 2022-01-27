@@ -43,7 +43,7 @@ public class GestionPropietario extends javax.swing.JInternalFrame {
         inicializarDatos();
         jLblGestionELD.setText("GESTION DE " + this.tipoInmueble);
     }
-
+    //metodo de iniciar
     public void inicializarDatos() {
         String[] titulos = {"Codigo", "Nombre", "Direccion", "Costo"};
         jTblEdificios.setModel(new DefaultTableModel(null, titulos) {
