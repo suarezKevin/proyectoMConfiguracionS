@@ -30,6 +30,7 @@ public class GestionPropietario extends javax.swing.JInternalFrame {
     /**
      * Creates new form InterfazPropietario
      */
+    //metodo
     public GestionPropietario(String cedulaU, String tipoG) {
         initComponents();
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
