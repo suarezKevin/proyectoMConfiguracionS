@@ -10,5 +10,6 @@ package Usuarios;
  * @author Dalembert
  */
 public class Secretaria extends Persona{
+    //clase que hereda de persona 
     String cargo;
 }
