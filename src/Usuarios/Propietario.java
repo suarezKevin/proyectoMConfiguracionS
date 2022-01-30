@@ -10,6 +10,7 @@ package Usuarios;
  * @author Dalembert
  */
 public class Propietario extends Persona{
+    //get and set
     String cargo;
 
     public String getCargo() {
