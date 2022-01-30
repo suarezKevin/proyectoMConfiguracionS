@@ -44,7 +44,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         gi.setVisible(true);
     }
 
-    
+    public void interfazSecretaria() {
+        jBtnGdepartamento.setVisible(false);
+        jBtnGlocal.setVisible(false);
+        jBtnGedificio.setVisible(false);
+        GestionSecretaria gs = new GestionSecretaria(this.cedulaU);
+        jDsktpVentana.add(gs);
+        gs.setVisible(true);
+    }
 
     public void dimensionGpropietario(GestionPropietario gp) {
         int ancho = jDsktpVentana.getWidth();
@@ -68,7 +75,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     interfazInquilino();
                 } else {
                     this.cargoU = rs.getString("cargo_usu");
-                    
+                    interfazSecretaria();
                 }
             }
 
@@ -433,7 +440,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/principal.jpeg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/principal.png"))); // NOI18N
+        jLabel3.setToolTipText("");
 
         jDsktpVentana.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
