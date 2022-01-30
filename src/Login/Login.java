@@ -6,6 +6,7 @@
 package Login;
 
 import gui.Conexion;
+import gui.MenuPrincipal;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,7 +22,7 @@ import javax.swing.JOptionPane;
  */
 public class Login extends javax.swing.JFrame {
 
-    String cedulaUsuario, usuario, contrasenia, cargo;
+   String cedulaUsuario, usuario, contrasenia, cargo;
 
     /**
      * Creates new form Login
@@ -46,7 +47,7 @@ public class Login extends javax.swing.JFrame {
                 if (usuario.equals(rs.getString("usuario")) && contrasenia.equals(rs.getString("contrasenia"))) {
                     this.cedulaUsuario = rs.getString("ced_usu_per");//cargue un valor
                     JOptionPane.showMessageDialog(null, "Inicio de Sesion Correcta !");
-                  
+                    identificarCargo(this.cedulaUsuario);
                     cuentaExiste = true;
                 }
 
@@ -60,6 +61,37 @@ public class Login extends javax.swing.JFrame {
         }
     }
 
+    public void identificarCargo(String cedula) {
+        try {
+            Conexion cnx = new Conexion();
+            Connection cnn = cnx.conectar();
+            String sql = "";
+            sql = "select cargo_usu from usuarios where ced_usu_per=" + cedula;
+            Statement stt = cnn.createStatement();
+            ResultSet rs = stt.executeQuery(sql);
+            while (rs.next()) {
+                if (rs.getString("cargo_usu").equals("Propietario")) {
+                    this.cargo = rs.getString("cargo_usu");
+                    MenuPrincipal gp = new MenuPrincipal(this.cedulaUsuario, this.cargo);
+                    gp.setVisible(true);
+                    this.dispose();
+                } else if(rs.getString("cargo_usu").equals("Inquilino")){
+                    this.cargo = rs.getString("cargo_usu");
+                    MenuPrincipal gp = new MenuPrincipal(this.cedulaUsuario, this.cargo);
+                    gp.setVisible(true);
+                    this.dispose();
+                } else{
+                    this.cargo = rs.getString("cargo_usu");
+                    MenuPrincipal gp = new MenuPrincipal(this.cedulaUsuario, this.cargo);
+                    gp.setVisible(true);
+                    this.dispose();
+                }
+            }
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex);
+        }
+    }
 
 
     /**
