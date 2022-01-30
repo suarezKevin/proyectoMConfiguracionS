@@ -10,7 +10,7 @@ package Usuarios;
  * @author Dalembert
  */
 public class Inquilino extends Persona{
-    //variables
+    //variables de esta clase
     String numeroCuenta;
     
 }

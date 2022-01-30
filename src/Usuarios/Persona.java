@@ -10,6 +10,7 @@ package Usuarios;
  * @author Dalembert
  */
 public abstract class Persona {
+    //variables
     
     String cedula;
     String nombre;
